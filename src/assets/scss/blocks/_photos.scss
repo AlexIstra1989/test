@@ -1,0 +1,65 @@
+.photos {
+ background-color: $btnColor;
+ color: $primaryColor;
+ padding-top: 68px;
+ max-height: 605px;
+ margin-bottom: 400px;
+ padding-bottom: 100px;
+&__box {
+ position: relative;
+}
+ // .photos__title
+ &__title {
+  color: $primaryColor;
+ }
+ // .photos__text
+ &__text {
+  max-width: 569px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 50px;
+  
+ }
+ // .photos__slider
+ &__slider {
+ 
+ }
+ // .photos__wrapper
+ &__wrapper {
+ }
+ // .photos__slide
+ &__slide {
+  cursor: pointer;
+ }
+ // .photos__slide-image
+ &__slide-image {
+  text-align: center;
+  width: 970px;
+  height: 646px;
+  img {
+   width: 100%;
+   height: 100%;
+  }
+ }
+ // .photos__buttons 
+ &__buttons {
+  position: absolute;
+  display: flex;
+  max-width: 170px;
+  width: 100%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+ }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+ color: $primaryColor;
+}
+
+.swiper-button-disabled::after,
+.swiper-button-disabled::after {
+ color: $accentColor !important;
+}

@@ -1,0 +1,152 @@
+.header {
+ position: absolute;
+ height: 110px;
+ padding: 55px 0;
+ width: 100%;
+ // .header__inner
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+		// .header__logo
+		&__logo {
+   z-index: 99999;
+		}
+		// .header__phone
+		&__phone {
+   font-size: 16px;
+   line-height: 1.5;
+   color: $primaryColor;
+   padding: 0 0 10px 35px;
+   position: relative; 
+   align-self: flex-end;
+   border-bottom: 2px solid transparent;
+   transition: all 0.7s;
+   &:hover {
+    border-color: $primaryColor;
+   } 
+   &::before {
+    @include pseudo;
+    @include background(url("../images/icons/phone.svg"));
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 0;
+   }
+   @media (max-width: $mobile) {
+    display: none;
+   }
+		}
+}
+//======================================================================
+.menu {
+ @media (max-width: 900px) {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: $btnColor;
+  padding: 150px 15px 50px 15px ;
+  z-index: 4;
+  transition: top 0.8s;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+   &_active {
+    top: 0;
+   }
+ }
+		// .menu__list
+		&__list {
+   display: flex;
+   gap: 45px;
+   @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+   }
+		}
+		// .menu__link
+		&__link {
+   font-size: 16px;
+   line-height: 1.5;
+   color: $primaryColor;
+   padding-bottom: 10px;
+   border-bottom: 2px solid transparent;
+   transition: all 0.7s;
+   &:hover {
+    border-color: $primaryColor;
+   }
+   @media (max-width: 900px) {
+    font-size: 28px;
+   } 
+		}
+}
+//========================================================================
+.header__btn {
+ display: none;
+ @media (max-width: 900px) {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 5;
+  span,
+  &::before,
+  &::after {
+   content: "";
+   transition: all 0.3s ease 0s;
+   right: 0;
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: $primaryColor;
+  }
+  &::before {
+   top: 0;
+  }
+  &::after {
+   bottom: 0;
+  }
+  span {
+   top: calc(50% - 1px);
+  }
+  .menu-open & {
+   span {
+    width: 0;
+   }
+   &::before,
+   &::after {
+   }
+   &::before {
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+   }
+   &::after {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+   }
+  }
+ }
+}
+.header__btn.header__btn_active {
+ span {
+  width: 0;
+ }
+ &::before,
+ &::after {
+ }
+ &::before {
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+ }
+ &::after {
+  bottom: calc(50% - 1px);
+  transform: rotate(45deg);
+ }
+}

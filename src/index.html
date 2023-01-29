@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Test</title>
+ <link rel="stylesheet" href="assets/css/style.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+</head>
+
+<body>
+ <div class="wrapper">
+  <header class="header lock-padding">
+   <div class="container">
+    <div class="header__inner">
+     <a class="header__logo logo" href="#">
+      <img src="assets/images/icons/logo.svg" alt="logo">
+     </a>
+     <nav class="header__menu menu">
+      <ul class="menu__list">
+       <li class="menu__item">
+        <a class="menu__link" href="#">À la carte</a>
+       </li>
+       <li class="menu__item">
+        <a class="menu__link" href="#">Wijnkaart</a>
+       </li>
+       <li class="menu__item">
+        <a class="menu__link" href="#">Lunchmenu</a>
+       </li>
+       <li class="menu__item">
+        <a class="menu__link" href="#">Contact</a>
+       </li>
+      </ul>
+     </nav>
+     <a class="header__phone" href="tel:3292825725">+32 9 282 57 25</a>
+     <button class="header__btn" type="button"><span></span></button>
+    </div>
+   </div>
+  </header>
+  <main class="page">
+   <section class="main-block">
+    <div class="container">
+     <span class="main-block__working">OPEN EVERYDAY 6AM - 9PM</span>
+     <h1 class="main-block__title">A bad day with lunch is better than a good day without it.</h1>
+     <div class="main-block__box">
+      <a class="main-block__popup btn popup-link" href="#popup">Reserve a table</a>
+      <div id="popup" class="main-block__popup popup">
+       <div class="popup__body">
+        <div class="popup__content">
+         <button class="popup__close close-popup" type="button">Закрыть</button>
+          <form class="popup__form form" action="#" id="form">
+            <h1 class="form__title">Leave your information to reserve a table</h1>
+            <div class="form__item">
+             <label class="form__name" for="formName">Name*:</label>
+             <input class="form__field _req" placeholder="Enter your name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" required>
+            </div>
+            <div class="form__item">
+             <label class="form__name" for="formEmail">Phone Email*:</label>
+             <input class="form__field _req _email" placeholder="Enter your email" autocomplete="off" type="email" name="form[]" data-error="Ошибка" required>
+            </div>
+            <div class="form__item">
+             <label class="form__name" for="formNumber">Phone Number*:</label>
+             <input class="form__field _req" placeholder="Enter your phone number" autocomplete="off" type="tel" name="form[]" data-error="Ошибка" required>
+            </div>
+            <div class="form__item">
+             <label class="form__name" for="formGuests">Number of guests*:</label>
+             <input class="form__field _req" placeholder="Enter the number of guests" autocomplete="off" type="number" name="form[]" data-error="Ошибка" required>
+            </div>
+            <div class="form__item">
+             <label class="form__name" for="form">Your requests</label>
+             <textarea class="form__entry" placeholder="What would you like to pass on to the administrator?"></textarea>
+            </div>
+            <div class="form__item">
+             <div class="form__checkbox checkbox">
+              <input class="checkbox__field" type="checkbox" id="formAgreement" name="agreement" checked>
+              <label class="checkbox__label" for="formAgreement">I give my consent to the processing of personal data in accordance with <a href="#">the rules of</a></label>
+             </div>
+            </div>
+            <button class="form__btn btn" type="submit">Send</button>
+          </form>
+        </div>
+       </div>
+      </div>
+      <ul class="main-block__social social">
+       <li class="social__item">
+        <a class="social__link" href="#">Fb</a>
+       </li>
+       <li class="social__item">
+        <a class="social__link" href="#">Ig</a>
+       </li>
+       <li class="social__item">
+        <a class="social__link" href="#">Tw</a>
+       </li>
+       <li class="social__item">
+        <a class="social__link" href="#">Yt</a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+    <div class="specials">
+     <div class="container">
+      <div class="specials__inner">
+       <div class="specials__items">
+        <div class="specials__item">
+         <h4 class="specials__date">Woensdag 12/01</h4>
+         <ul class="specials__meals">
+          <li class="specials__meals-item">Salade met Serrano</li>
+          <div class="specials__decor">
+           <span></span>
+           <span></span>
+           <span></span>
+          </div>
+          <li class="specials__meals-item">Steak Tartaar</li>
+         </ul>
+        </div>
+        <div class="specials__item">
+         <h4 class="specials__date">Donderdag 13/01</h4>
+         <ul class="specials__meals">
+          <li class="specials__meals-item">Toast Roquefort</li>
+          <div class="specials__decor">
+           <span></span>
+           <span></span>
+           <span></span>
+          </div>
+          <li class="specials__meals-item">Penne met Kip en Prei</li>
+         </ul>
+        </div>
+        <div class="specials__item">
+         <h4 class="specials__date">Vrijdag 14/01</h4>
+         <ul class="specials__meals">
+          <li class="specials__meals-item">Verrassing van de Chef</li>
+          <div class="specials__decor">
+           <span></span>
+           <span></span>
+           <span></span>
+          </div>
+          <li class="specials__meals-item">Penne met Kip en Prei</li>
+         </ul>
+        </div>
+        <div class="specials__item">
+         <h4 class="specials__date">Vrijdag 15/01</h4>
+         <ul class="specials__meals">
+          <li class="specials__meals-item">Verrassing van de Chef</li>
+          <div class="specials__decor">
+           <span></span>
+           <span></span>
+           <span></span>
+          </div>
+          <li class="specials__meals-item">Penne met Kip en Prei</li>
+         </ul>
+        </div>
+        <div class="specials__item">
+         <h4 class="specials__date">Vrijdag 16/01</h4>
+         <ul class="specials__meals">
+          <li class="specials__meals-item">Verrassing van de Chef</li>
+          <div class="specials__decor">
+           <span></span>
+           <span></span>
+           <span></span>
+          </div>
+          <li class="specials__meals-item">Penne met Kip en Prei</li>
+         </ul>
+        </div>
+       </div>
+       <div class="specials__images">
+        <div class="specials__image">
+         <img src="assets/images/specials-block/image-1.jpg" alt="image">
+        </div>
+        <div class="specials__image">
+         <img src="assets/images/specials-block/image-2.jpg" alt="image">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="reviews">
+     <div class="container">
+      <div class="reviews__slider swiper">
+       <div class="reviews__wrapper swiper-wrapper">
+        <div class="reviews__slide swiper-slide">
+         <div class="reviews__item">
+          <h3 class="reviews__title">Goede service, lekker eten, toffe ambiance</h3>
+          <p class="reviews__text">
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+           magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+           gubergren.
+          </p>
+          <span class="reviews__author">ALAIN HEYNDRICKX</span>
+         </div>
+        </div>
+        <div class="reviews__slide swiper-slide">
+         <div class="reviews__item">
+          <h3 class="reviews__title">Goede service, lekker eten, toffe ambiance</h3>
+          <p class="reviews__text">
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+           magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+           gubergren.
+          </p>
+          <span class="reviews__author">ALAIN HEYNDRICKX</span>
+         </div>
+        </div>
+        <div class="reviews__slide swiper-slide">
+         <div class="reviews__item">
+          <h3 class="reviews__title">Goede service, lekker eten, toffe ambiance</h3>
+          <p class="reviews__text">
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+           magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+           gubergren.
+          </p>
+          <span class="reviews__author">ALAIN HEYNDRICKX</span>
+         </div>
+        </div>
+       </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+     </div>
+    </div> 
+    <div class="targets">
+     <div class="container">
+      <div class="targets__items">
+       <div class="targets__item">
+        <div class="targets__descr">
+         <h5 class="targets__name">LEKKER ETEN</h5>
+         <p class="targets__text">
+          Eten gaat niet over indruk maken op mensen. Het gaat erom dat ze zich op hun gemak voelen. Dat is onze filosofie, goed
+          eten in een goede sfeer.
+         </p>
+         </div>
+        <div class="targets__image">
+         <img src="assets/images/targets/image-1.jpg" alt="#">
+        </div>
+       </div>
+       <div class="targets__item">
+        <div class="targets__descr">
+         <h5 class="targets__name">TOFFE AMBIANCE</h5>
+         <p class="targets__text">
+          Het creëren van de juiste sfeer is zeer belangrijk voor ons. We nemen onze tijd om te zorgen dat alle elementen
+          bijdragen aan de juiste setting.
+         </p>
+        </div>
+        <div class="targets__image">
+         <img src="assets/images/targets/image-2.jpg" alt="#">
+        </div>
+       </div>
+       <div class="targets__item">
+        <div class="targets__descr">
+         <h5 class="targets__name">LEKKERE COCKTAILS</h5>
+         <p class="targets__text">
+          Ons doel is simpel: een gastvrije plek bieden waar u kunt genieten van een onvergetelijke cocktail, een goed gesprek en
+          lekker eten.
+         </p>
+        </div>
+        <div class="targets__image">
+         <img src="assets/images/targets/image-3.jpg" alt="#">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <section class="photos">
+     <div class="container">
+      <div class="photos__box">
+       <h2 class="photos__title title">Sfeerfoto's</h2>
+       <p class="photos__text">
+        De beste manier om de sfeer te ervaren is eens langskomen.<br />
+        In tussentijd hebben we hier alvast wat foto’s voor je klaar.
+       </p>
+       <div class="photos__buttons">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+       </div>
+      </div>
+     </div>
+     <div class="photos__slider swiper">
+      <div class="photos__wrapper swiper-wrapper">
+       <div class="photos__slide swiper-slide">
+        <div class="photos__slide-image">
+         <img src="assets/images/photos/slide-1.jpg" alt="#">
+        </div>
+       </div>
+       <div class="photos__slide swiper-slide">
+        <div class="photos__slide-image">
+         <img src="assets/images/photos/slide-2.jpg" alt="#">
+        </div>
+       </div>
+       <div class="photos__slide swiper-slide">
+        <div class="photos__slide-image">
+         <img src="assets/images/photos/slide-3.jpg" alt="#">
+        </div>
+       </div>
+       <div class="photos__slide swiper-slide">
+        <div class="photos__slide-image">
+         <img src="assets/images/photos/slide-1.jpg" alt="#">
+        </div>
+       </div>
+       <div class="photos__slide swiper-slide">
+        <div class="photos__slide-image">
+         <img src="assets/images/photos/slide-2.jpg" alt="#">
+        </div>
+       </div>
+       <div class="photos__slide swiper-slide">
+        <div class="photos__slide-image">
+         <img src="assets/images/photos/slide-3.jpg" alt="#">
+        </div>
+       </div>
+      </div>
+    
+     </div>
+    </section>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer__inner">
+     <div class="footer__top">
+      <div class="footer__contacts contacts">
+       <h4 class="contacts__title title">Contacts</h4>
+       <ul class="contacts__list">
+        <li class="contacts__item">
+         <span class="contacts__item-icon contacts__item-icon_phone"></span>
+         <div class="contacts__item-info">
+          <span class="contacts__name">Phone Number</span>
+          <a class="contacts__phone" href="tel:3292825725">+32 9 282 57 25</a>
+         </div>
+        </li>
+        <li class="contacts__item">
+         <span class="contacts__item-icon contacts__item-icon_email"></span>
+         <div class="contacts__item-info">
+          <span class="contacts__name">Email</span>
+          <a class="contacts__email" href="mailto:info@email.com">info@email.com</a>
+         </div>
+        </li>
+        <li class="contacts__item">
+         <span class="contacts__item-icon contacts__item-icon_work"></span>
+         <div class="contacts__item-info">
+          <span class="contacts__name">Opening Hours</span>
+          <p class="contacts__hours">Everyday from 6 AM - 9 PM</p>
+         </div>
+        </li>
+        <li class="contacts__item">
+         <span class="contacts__item-icon contacts__item-icon_local"></span>
+         <div class="contacts__item-info">
+          <span class="contacts__name">Map Street</span>
+          <address class="contacts__location">Jl. Raya Surabaya 2787</address>
+         </div>
+        </li>
+       </ul>
+     </div>
+     <form class="footer__form" action="#">
+      <h4 class="footer__form-title title">have any questions?</h4>
+      <div class="footer__fields">
+       <div class="footer__fields-box">
+        <label class="footer__field-name">Name</label>
+        <input class="footer__field" placeholder="Input your name" autocomplete="off" type="text" name="form[]" data-error="Ошибка">
+       </div>
+       <div class="footer__fields-box">
+        <label class="footer__field-name">Email</label>
+        <input class="footer__field" placeholder="Input your email" autocomplete="off" type="email" name="form[]" data-error="Ошибка">
+       </div>
+      </div>
+      <label class="footer__field-name">Speciale Request</label>
+       <textarea class="footer__entry" placeholder="Input your special request"></textarea>
+      <button class="footer__btn btn" type="submit">Send</button>
+     </form>
+    </div>
+    <div class="footer__map">
+     <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57757.033386064024!2d4.097161377633909!3d50.906522932971065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4ed73c76867%3A0xc18b3a66787302a7!2z0JHRgNGO0YHRgdC10LvRjCwg0JHQtdC70YzQs9C40Y8!5e0!3m2!1sru!2sru!4v1674807757779!5m2!1sru!2sru"
+      width="100%" height="547" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="footer__bottom">
+     <a class="footer__logo logo" href="#">
+      <img src="assets/images/icons/logo-footer.svg " alt="logo">
+     </a>
+     <ul class="footer__social social">
+      <li class="social__item">
+       <a class="social__link" href="#">Fb</a>
+      </li>
+      <li class="social__item">
+       <a class="social__link" href="#">Ig</a>
+      </li>
+      <li class="social__item">
+       <a class="social__link" href="#">Tw</a>
+      </li>
+      <li class="social__item">
+       <a class="social__link" href="#">Yt</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </footer>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="assets/js/script.js"></script>
+</body>
+
+</html>
