@@ -51,36 +51,30 @@
        <div class="popup__body">
         <div class="popup__content">
          <button class="popup__close close-popup" type="button">Закрыть</button>
-          <form class="popup__form form" action="#" id="form">
-            <h1 class="form__title">Leave your information to reserve a table</h1>
-            <div class="form__item">
-             <label class="form__name" for="formName">Name*:</label>
-             <input class="form__field _req" placeholder="Enter your name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" required>
-            </div>
-            <div class="form__item">
-             <label class="form__name" for="formEmail">Phone Email*:</label>
-             <input class="form__field _req _email" placeholder="Enter your email" autocomplete="off" type="email" name="form[]" data-error="Ошибка" required>
-            </div>
-            <div class="form__item">
-             <label class="form__name" for="formNumber">Phone Number*:</label>
-             <input class="form__field _req" placeholder="Enter your phone number" autocomplete="off" type="tel" name="form[]" data-error="Ошибка" required>
-            </div>
-            <div class="form__item">
-             <label class="form__name" for="formGuests">Number of guests*:</label>
-             <input class="form__field _req" placeholder="Enter the number of guests" autocomplete="off" type="number" name="form[]" data-error="Ошибка" required>
-            </div>
-            <div class="form__item">
-             <label class="form__name" for="form">Your requests</label>
-             <textarea class="form__entry" placeholder="What would you like to pass on to the administrator?"></textarea>
-            </div>
-            <div class="form__item">
-             <div class="form__checkbox checkbox">
-              <input class="checkbox__field" type="checkbox" id="formAgreement" name="agreement" checked>
-              <label class="checkbox__label" for="formAgreement">I give my consent to the processing of personal data in accordance with <a href="#">the rules of</a></label>
-             </div>
-            </div>
-            <button class="form__btn btn" type="submit">Send</button>
-          </form>
+         <form class="popup__form form" action="send_mail.php" name="form" method="POST">
+          <h1 class="form__title">Leave your information to reserve a table</h1>
+          <div class="form__item">
+           <label class="form__name" for="formName">Name*:</label>
+           <input class="form__field" placeholder="Enter your name" type="text" name="name" id="name" 
+           data-reg="^[а-яА-ЯёЁa-zA-Z0-9]+$" />
+          </div>
+          <div class="form__item">
+           <label class="form__name" for="formEmail">Email*:</label>
+           <input class="form__field" placeholder="Enter your email" type="email" name="email" id="email" 
+           data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"/>
+          </div>
+          <div class="form__item">
+           <label class="form__name" for="formNumber">Phone Number*:</label>
+           <input class="form__field" placeholder="Enter your phone number" type="tel" name="phone" id="phone" data-reg="^((\+7|7|8)+([0-9]){10})$"/>
+          </div>
+          <div class="form__item message-box">
+           <label class="form__name" for="form">Your requests</label>
+           <textarea class="form__entry" placeholder="What would you like to pass on to the administrator?" name="message"></textarea>
+          </div>
+          <div class="button">
+           <input class="form__btn btn" type="submit" id="button" value="Send" />
+          </div>
+         </form>
         </div>
        </div>
       </div>
@@ -310,7 +304,7 @@
         </div>
        </div>
       </div>
-    
+      <div class="swiper-pagination"></div>
      </div>
     </section>
   </main>
